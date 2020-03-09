@@ -1,8 +1,14 @@
-# Function to randomly generate a mix of energy from different sources to meet the global energy demand
-# Where energy is a vector of the different energy sources (i.e. s = solar, w = wind etc)
-# Probs is the probability of drawing each type of energy - this can be adjusted based on global energy potential
-# N is the amount of energy in TWh that you want to draw (i.e. the global energy demand)
-# Each time a type of energy drawn it represents 1 TWh of energy from that source
+#' Function to randomly generate a mix of energy from different sources to meet the global energy demand
+#'
+#' @param energy a vector of the names of different energy sources (i.e. s = solar, w = wind etc)
+#' @param demand the amount of energy (in TWh) that you want to draw (i.e. the global demand)
+#' @param probs the probability of drawing each type of energy based on global energy potential for each source
+#' @return out a data frame consisting of the following items
+#' \describe{
+#' \item{energy_type}{The different energy sources}
+#' \item{TWh}{The number of TWh provided by each energy source}
+#' \item{percent_of_demand}{The percent of total demand that comes from each energy source}
+#' }
 
 
 
