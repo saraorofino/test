@@ -1,0 +1,30 @@
+---
+title: "testing"
+author: "Sara Orofino"
+date: "3/9/2020"
+output: html_document
+---
+
+
+Create some example data for the z-score function and save it to the package:
+```{r package-data}
+test_data <- runif(20,10,100)
+
+#Save it to the data:
+use_data(test_data, pkg = test)
+```
+
+
+Create some test data for the energy_mixes function and save it to the package:
+```{r}
+# Create a dataframe of energy types and probabilty:
+# cc = carbon capture, s = solar, w = wind, sw = solar/wind co-generation, g = geothermal, b = biofuels, n = nuclear
+energy_types <- c("cc", "s", "w", "sw", "g", "b", "n")
+energy_prob <- c(0.30, 0.50, 0.50, 0.25, 0.15, 0.45, 0.20)
+
+test_energy <- data.frame(energy_type = energy_types, probability = energy_prob)
+
+#save it to the data:
+use_data(test_energy, pkg = test, overwrite = TRUE)
+```
+

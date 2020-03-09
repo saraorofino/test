@@ -1,0 +1,18 @@
+---
+title: "apply_zscore"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{apply_zscore}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+Example of running the z_score function:
+```{r}
+library(test)
+
+data(test_data)
+
+z_score_test <- zscore(test_data)
+```
+
